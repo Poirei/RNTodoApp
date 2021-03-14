@@ -1,10 +1,8 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 import {NavigationContainer} from '@react-navigation/native';
 import {LoginScreen, HomeScreen, RegistrationScreen} from './src/screens';
 import {decode, encode} from 'base-64';
-import {useState} from 'react';
-import {useEffect} from 'react';
 
 if (!global.btoa) {
   global.btoa = encode;
