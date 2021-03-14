@@ -1,7 +1,9 @@
+/* eslint-disable prettier/prettier */
 import React, {useState} from 'react';
 import {Image, Text, View} from 'react-native';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 import {Button, TextInput} from 'react-native-paper';
+import {firebase, fbProvider, googleProvider} from '../../firebase/config';
 import styles from './styles';
 
 const LoginScreen = ({navigation}) => {
@@ -51,6 +53,23 @@ const LoginScreen = ({navigation}) => {
           style={styles.button}
           labelStyle={styles.buttonTitle}>
           Log in
+        </Button>
+        <View>OR</View>
+        <Button
+          mode="contained"
+          color="rgb(228, 236, 111)"
+          onPress={() => firebase.auth().signInWithRedirect(googleProvider)}
+          style={styles.button}
+          labelStyle={styles.buttonTitle}>
+          Sign in with Google
+        </Button>
+        <Button
+          mode="contained"
+          color="rgb(111, 150, 236)"
+          onPress={() => firebase.auth().signInWithRedirect(fbProvider)}
+          style={styles.button}
+          labelStyle={styles.buttonTitle}>
+          Sign in with Facebook
         </Button>
         <View style={styles.footerView}>
           <Text style={styles.footerText}>

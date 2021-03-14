@@ -1,3 +1,6 @@
+/* eslint-disable prettier/prettier */
+/* eslint-disable react-native/no-inline-styles */
+/* eslint-disable react/jsx-no-undef */
 import React from 'react';
 import {useState} from 'react';
 import {FlatList, SafeAreaView, StatusBar, Text, View} from 'react-native';

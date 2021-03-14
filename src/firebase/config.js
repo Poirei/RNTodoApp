@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import * as firebase from 'firebase';
 import '@firebase/auth';
 import '@firebase/firestore';
@@ -15,5 +16,9 @@ const firebaseConfig = {
 if (!firebase.apps.length) {
   firebase.initializeApp(firebaseConfig);
 }
+
+export const googleProvider = new firebase.auth.GoogleAuthProvider();
+
+export const fbProvider = new firebase.auth.FacebookAuthProvider();
 
 export {firebase};
