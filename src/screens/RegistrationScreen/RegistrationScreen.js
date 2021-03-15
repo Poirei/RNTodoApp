@@ -1,4 +1,5 @@
 /* eslint-disable prettier/prettier */
+/* eslint-disable no-alert */
 import React from 'react';
 import {useState} from 'react';
 import {Image, Text, View} from 'react-native';
