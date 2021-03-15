@@ -33,7 +33,7 @@ const RegistrationScreen = ({navigation}) => {
           email,
           fullName,
         };
-        const usersRef = firebase.firestore().collection(`users`);
+        const usersRef = firebase.firestore().collection('users');
         usersRef
           .doc(uid)
           .set(data)
